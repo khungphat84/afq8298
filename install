@@ -22,7 +22,7 @@ wget -O /usr/bin/dropmon "https://raw.githubusercontent.com/khungphat84/afq8298/
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/khungphat84/afq8298/master/menu.sh"
 wget -O /usr/bin/user-active-list "https://raw.githubusercontent.com/khungphat84/afq8298/master/user-active-list.sh"
 wget -O /usr/bin/user-add "https://raw.githubusercontent.com/khungphat84/afq8298/master/user-add.sh"
-wget -O /usr/bin/user-add-pptp "https://raw.githubusercontent.com/khungphat84/afq8298/master/menu/user-add-pptp.sh"
+wget -O /usr/bin/user-add-pptp "https://raw.githubusercontent.com/khungphat84/afq8298/master/user-add-pptp.sh"
 wget -O /usr/bin/user-del "https://raw.githubusercontent.com/khungphat84/afq8298/master/user-del.sh"
 wget -O /usr/bin/disable-user-expire "https://raw.githubusercontent.com/khungphat84/afq8298/master/disable-user-expire.sh"
 wget -O /usr/bin/delete-user-expire "https://raw.githubusercontent.com/khungphat84/afq8298/master/delete-user-expire.sh"
@@ -44,7 +44,7 @@ cd
 #rm -rf /etc/cron.hourly/
 #rm -rf /etc/cron.monthly/
 rm -rf /etc/cron.daily/
-wget -O /root/passwd "https://raw.githubusercontent.com/khungphat84/afq8298/master/method1/passwd.sh"
+wget -O /root/passwd "https://raw.githubusercontent.com/khungphat84/afq8298/master/passwd.sh"
 chmod +x /root/passwd
 echo "01 23 * * * root /root/passwd" > /etc/cron.d/passwd
 
