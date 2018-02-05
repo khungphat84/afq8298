@@ -3,8 +3,7 @@ clear
 
 # get the VPS IP
 #ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
-MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
-#MYIP=$(ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
+MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | hea9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1)
 if [ "$MYIP" = "" ]; then
 	MYIP=$(wget -qO- ipv4.icanhazip.com)
 fi
@@ -24,33 +23,12 @@ date +"                        %A, %d-%m-%Y" | lolcat
 date +"                           %H:%M:%S %Z" | lolcat
 echo -e "\e[40;38;5;226m.  ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡SIMPLE MENU≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡ ≡
 ";PS3='Select an option [1-35] Then Press ENTER: '
-options=("Create User" "Create Account Trial" "Renew User" "Change Password User Premium" "All User" "Delete User" "Create User PPTP VPN" "Monitor Multi Login" "Online User" "User Active List" "User Expired" "Banned User" "Unbanned User" "Delete User Expired" "Status Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Change Password VPS" "Clear Cache Ram" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Install OpenVpn"  "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Change Port OpenSSH" "Change Port Dropbear" "Change Port Squid3" "Change Port OpenVPN" "Download Client Ovpn" "Install Ocs_Panel" "Quit")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "Create User")
-	clear
-        user-add
-        break
-            ;;
-	"Create Account Trial")
+options=("Create User" "Create Account TrAuto Kill Multi Login" "Change Password VPS" "Clear Cache Ram" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Install OpenVpn"  "Restart OpenSSH" "Restart Squi
 	clear
 	user-gen
 	break
 	;;
-	"Renew User")
-	clear
-	user-renew
-	break
-	;;
-	"Change Password User Premium")
-	clear
-	user-pass
-	break
-	;;
-	"All User")
-	clear
-	user-list | lolcat
+	"Renew 
 	break
 	;;
 	"Delete User")
